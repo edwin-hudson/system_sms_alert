@@ -125,7 +125,9 @@ const requestOptions = {
 };
 
 function sendSMS() {
-    fetch("https://frogapi.wigal.com.gh/api/v3/sms/send", requestOptions)
+    fetch("http://frogapi.wigal.com.gh/api/v3/sms/send", requestOptions)
+    // fetch("https://cors-anywhere.herokuapp.com/https://frogapi.wigal.com.gh/api/v3/sms/send", requestOptions)
+
         .then((response) => response.text())
         .then((result) => console.log(result))
         .catch((error) => console.error(error));
